@@ -1,5 +1,6 @@
 # EX-NO14-HASH-ALGORITHM
-
+# Name: Mopuri Ankitha
+# Register Number:212223040117
 ## AIM:
 To implement HASH ALGORITHM
 
@@ -27,9 +28,37 @@ To implement HASH ALGORITHM
 
 
 ## Program:
+```
+#include <stdio.h>
+#include <string.h>
 
+unsigned long simpleHash(char *message) {
+    unsigned long hash = 0;
+    int i;
+    for (i = 0; message[i] != '\0'; i++) {
+        hash = (hash * 31) + message[i]; 
+    }
+    return hash;
+}
+
+int main() {
+    char message[500];
+    unsigned long hashValue;
+
+    printf("Enter the message: ");
+    scanf("%s", message);
+
+    hashValue = simpleHash(message);
+
+    printf("\nGenerated Hash Value: %lx\n", hashValue);  
+    return 0;
+}
+
+```
 
 ## Output:
+<img width="486" height="199" alt="image" src="https://github.com/user-attachments/assets/5dbcb583-b502-4fea-b36c-d3627e127059" />
+
 
 ## Result:
 The program is executed successfully.
